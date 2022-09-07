@@ -1,0 +1,11 @@
+.log-out {
+  background-color: #343a40;
+  border: none;
+  outline: none;
+}
+
+.log-out:focus {
+  background-color: #343a40;
+  border: none;
+  outline: none;
+}

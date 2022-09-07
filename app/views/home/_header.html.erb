@@ -10,27 +10,55 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item">
-        <%# link to the 'about' section %>
-        <%= link_to 'About', home_about_path, class:"nav-link" %>
-      </li>
+    <%# options in navbar when user is NOT logged in %>
+      <% if !user_signed_in? %>
 
-      <li class="nav-item">
-        <%# link to the 'friends list' section %>
-        <%= link_to 'Friends', friends_path, class:"nav-link" %>
-      </li>
+        <li class="nav-item">
+          <%# link to the 'add new friend' section %>
+          <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+        </li>
 
-      <li class="nav-item">
-        <%# link to the 'add new friend' section %>
-        <%= link_to 'Add friend', new_friend_path, class:"nav-link" %>
-      </li>
+        <li class="nav-item">
+          <%# link to the 'add new friend' section %>
+          <%= link_to 'Login', new_user_session_path, class:"nav-link" %>
+        </li>
 
-      <%# Add sigb in, sign up, log out options %>
+    <%# options when user is logged in %>
+      <% else %>
 
-      <li class="nav-item">
-        <%# avatar %>
-        <img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/raimundasra" />
-      </li>
+        <li class="nav-item">
+          <%# link to the 'add new friend' section %>
+          <%# !!!!! find a better way to fix button, as of now it's cowboy method overiding with css !!!!!!! %>
+          <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link log-out" %>
+        </li>
+
+        <li class="nav-item">
+          <%# link to the 'add new friend' section %>
+          <%= link_to 'Edit Profile', edit_user_registration_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%# link to the 'about' section %>
+          <%= link_to 'About', home_about_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%# link to the 'friends list' section %>
+          <%= link_to 'Friends', friends_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%# link to the 'add new friend' section %>
+          <%= link_to 'Add friend', new_friend_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%# avatar %>
+          <img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/raimundasra" />
+        </li>
+
+      <% end %>
+
 
     </ul>
 
