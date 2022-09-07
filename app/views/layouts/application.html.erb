@@ -20,6 +20,13 @@
 
     <%= render 'home/header' %>
     <div class="container">
+
+    <%# this will bring up notice when deleting or creating friend %>
+    <% if notice %>
+     <%= render 'layouts/alerts' %>
+    <% end %>
+
+
       <%# this is where all pages are getting put in %>
       <%= yield %>
     </div>
