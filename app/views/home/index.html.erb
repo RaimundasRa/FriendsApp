@@ -1,2 +1,35 @@
-<h1>Hello! Let's beggin</h1>
-this is my second web page
+<div class="container">
+<br/>
+<h1 style="font-size: 50px">Hi! 👋 Welcome to the Friends App</h1>
+
+<br/>
+<p style="font-size: 20px">This app works like a virtual phone book. Save your friends phone numbers,
+      social media links and other contact info to stay in touch with them.</p>
+<br/>
+
+<p style="font-size: 20px">To begin, please create an account using 'Sign Up' or if you already have an account, please use 'Login'</p>
+<br/>
+
+<ul style="list-style: none; padding: 0px 0px">
+<% if !user_signed_in? %>
+
+  <div class="row">
+    <div class="col-6">
+          <li class="nav-item">
+            <%# link to the 'add new friend' section %>
+            <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link btn btn-secondary" %>
+          </li>
+    </div>
+
+    <div class="col-6">
+          <li class="nav-item">
+          <%# link to the 'add new friend' section %>
+          <%= link_to 'Login', new_user_session_path, class:"nav-link btn btn-secondary" %>
+        </li>
+    </div>
+  </div>
+
+<% end %>
+</ul>
+
+</div>
