@@ -50,6 +50,7 @@
 
   <div class="card-body">
 
+    <%# check why it's giving errors when deleting account. It get deleted, but it may be that it is not redirecting after that %>
     <p>Unhappy? <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure you want to delete your account?" }, method: :delete, class: "btn btn-warning" %></p>
 
     <%= link_to "Back", :back, class: "btn btn-secondary" %>
