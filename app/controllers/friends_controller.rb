@@ -1,7 +1,6 @@
 class FriendsController < ApplicationController
   before_action :set_friend, only: %i[ show edit update destroy ]
-
-  # GET /friends or /friends.json
+  before_action :authenticate_user!
   def index
     @friends = Friend.all
   end
