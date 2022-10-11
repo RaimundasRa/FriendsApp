@@ -26,21 +26,13 @@
     <%# options when user is logged in %>
       <% else %>
 
-        <li class="nav-item">
-          <%# link to the 'add new friend' section %>
-          <%# !!!!! find a better way to fix button, as of now it's cowboy method overiding with css !!!!!!! %>
-          <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link log-out" %>
-        </li>
 
-        <li class="nav-item">
-          <%# link to the 'add new friend' section %>
-          <%= link_to 'Edit Profile', edit_user_registration_path, class:"nav-link" %>
-        </li>
 
-        <li class="nav-item">
+        <%# <li class="nav-item"> %>
           <%# link to the 'about' section %>
-          <%= link_to 'About', home_about_path, class:"nav-link" %>
-        </li>
+          <%# <%= link_to 'About', home_about_path, class:"nav-link" %>
+        <%# </li> %>
+
 
         <li class="nav-item">
           <%# link to the 'friends list' section %>
@@ -52,9 +44,20 @@
           <%= link_to 'Add friend', new_friend_path, class:"nav-link" %>
         </li>
 
+        <%# <li class="nav-item">
+          avatar %>
+          <%# <img class="avatar-bordered" alt="avatar-bordered" src="" />
+        </li> %>
+
         <li class="nav-item">
-          <%# avatar %>
-          <img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/raimundasra" />
+          <%# link to the 'add new friend' section %>
+          <%= link_to 'Edit Profile', edit_user_registration_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%# link to the 'add new friend' section %>
+          <%# !!!!! find a better way to fix button, as of now it's cowboy method overiding with css !!!!!!! %>
+          <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link log-out" %>
         </li>
 
       <% end %>
@@ -62,6 +65,7 @@
 
     </ul>
 
+<%# Seach bar not working, just for the looks, at least for now %>
 <% if user_signed_in? %>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
