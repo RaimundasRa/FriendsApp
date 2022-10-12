@@ -1,17 +1,17 @@
 **FriendsApp**
 
-=========
+---------
 **About**
-=========
+---------
 
 A simple web app that works like virtual phonebook. It allows user to create a "friend"
 add phone number, email, social. It allows user to edit the info or delete "friend"
 enitirely. This app can be used as a back up if a person would loose his/her phone with 
 all the contacts in it.
 
-===================
+-------------------
 **Features so far**
-===================
+-------------------
 
 **CRUD.** User can CREATE "friend" with info attached to it. User can READ existing "friend" info.
 User can UPDATE existing "friend" info. User can DESTROY "friend" entirely.
@@ -26,9 +26,9 @@ used. Only a registered user can create their "friends" list.
 styling to buttons, styling for sign in page, using association hide tabs on header if user
 is not signed in etc.
 
-================
+----------------
 **Future plans**
-================
+----------------
 
 - Definitely needs more styling. 
 - Might need to add more data for "friend" f.e. date of birth.
