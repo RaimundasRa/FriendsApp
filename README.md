@@ -2,7 +2,7 @@
 **About**
 ---------
 
-A simple web app that works like virtual phonebook. It allows user to create a "friend"
+A simple Rails app that works like virtual phonebook. It allows user to create a "friend"
 add phone number, email, social. It allows user to edit the info or delete "friend"
 enitirely. This app can be used as a back up if a person would loose his/her phone with 
 all the contacts in it.
